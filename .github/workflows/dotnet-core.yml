@@ -22,5 +22,7 @@ jobs:
       working-directory: ./BetterConsoleApp
     - name: Build
       run: dotnet build --configuration Release --no-restore
+      working-directory: ./BetterConsoleApp
     - name: Test
       run: dotnet test --no-restore --verbosity normal
+      working-directory: ./BetterConsoleApp/ConsoleUI.Test
