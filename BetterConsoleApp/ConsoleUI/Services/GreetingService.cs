@@ -1,6 +1,7 @@
 ﻿using ConsoleUI.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace ConsoleUI.Services
 {
@@ -28,10 +29,12 @@ namespace ConsoleUI.Services
             _log.LogError("This is a log ERROR");
             _log.LogWarning("This is a log WARNING");
 
-            _computationService.SampleLog();        
+            _computationService.SampleLog();
 
             _log.LogInformation(_computationService.AddTwoNumbers(4,6).ToString());
             _log.LogInformation(_computationService.SubtractTwoNumbers(10,6).ToString());
+
+            Log.CloseAndFlush();
         }
     }
 }

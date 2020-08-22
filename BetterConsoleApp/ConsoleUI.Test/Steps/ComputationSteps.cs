@@ -27,14 +27,14 @@ namespace ConsoleUI.Test.Steps
             _scenarioContext.Add("numberOne", numberOne);
             _computationContext.NumberOne = numberOne;
         }
-        
+
         [Given(@"the second number is (.*)")]
         public void GivenTheSecondNumberIs(double numberTwo)
         {
             _scenarioContext.Add("numberTwo", numberTwo);
             _computationContext.NumberTwo = numberTwo;
         }
-        
+
         [When(@"the two numbers are added")]
         public void WhenTheTwoNumbersAreAdded()
         {
@@ -45,7 +45,7 @@ namespace ConsoleUI.Test.Steps
             var numberOne = _computationContext.NumberOne;
             var numberTwo = _computationContext.NumberTwo;
 
-            _computationContext.Answer = _computationService.AddTwoNumbers(numberOne, numberTwo);            
+            _computationContext.Answer = _computationService.AddTwoNumbers(numberOne, numberTwo);
         }
 
         [Given(@"you have the following numbers:")]
@@ -77,7 +77,7 @@ namespace ConsoleUI.Test.Steps
 
         [Then(@"the result should not be (.*)")]
         public void ThenTheResultShouldNotBe(int result)
-        {            
+        {
             _computationContext.Answer
                 .Should()
                 .NotBe(result, $"The answer should not be {_computationContext.Answer} when using the numbers { _computationContext.NumberOne} and { _computationContext.NumberTwo}");

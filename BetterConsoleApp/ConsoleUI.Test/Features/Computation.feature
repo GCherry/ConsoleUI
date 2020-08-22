@@ -20,7 +20,7 @@ Scenario Outline: Add two numbers a bunch of times
 	When the two numbers are added
 	Then the result should be <Result>
 
-	Examples: 
+	Examples:
 	| FirstNumber | SecondNumber | Result |
 	| 2           | 2            | 4      |
 	| 20          | 5            | 25     |

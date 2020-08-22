@@ -24,14 +24,14 @@ namespace ConsoleUI
 
             Log.Logger.Information("Application Starting");
 
-            var host = Host.CreateDefaultBuilder()
-                .ConfigureServices((context, services) =>
-                {                    
-                    services.AddTransient<IGreetingService, GreetingService>();
-                    services.AddTransient<IComputationService, ComputationService>();
-                })
-                .UseSerilog()
-                .Build();
+            using var host = Host.CreateDefaultBuilder()
+                  .ConfigureServices((context, services) =>
+                  {
+                      services.AddTransient<IGreetingService, GreetingService>();
+                      services.AddTransient<IComputationService, ComputationService>();
+                  })
+                  .UseSerilog()
+                  .Build();
 
             var svc = ActivatorUtilities.CreateInstance<GreetingService>(host.Services);
             svc.Run();
