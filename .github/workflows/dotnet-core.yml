@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 3.1.301
     - name: Install dependencies
-      run: dotnet restore "ConsoleUI/BetterConsoleApp/BetterConsoleApp.sln"
+      run: dotnet restore "ConsoleUI/BetterConsoleApp/ConsoleUI/ConsoleUI.csproj"
     - name: Build
-      run: dotnet build "ConsoleUI/BetterConsoleApp/BetterConsoleApp.sln" --configuration Release --no-restore
+      run: dotnet build "ConsoleUI/BetterConsoleApp/ConsoleUI/ConsoleUI.csproj" --configuration Release --no-restore
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test "ConsoleUI/BetterConsoleApp/ConsoleUI.Test/ConsoleUI.Test.csproj" --no-restore --verbosity normal
