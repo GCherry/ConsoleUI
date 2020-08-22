@@ -1,16 +1,9 @@
 ﻿using BoDi;
 using ConsoleUI.Interfaces;
 using ConsoleUI.Services;
-using ConsoleUI.Test.Context;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Moq;
-using Serilog;
-using Serilog.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using TechTalk.SpecFlow;
 
 namespace ConsoleUI.Test.Hooks

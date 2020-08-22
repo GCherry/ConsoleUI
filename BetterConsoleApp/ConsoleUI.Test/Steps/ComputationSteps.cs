@@ -1,5 +1,4 @@
-﻿using System;
-using ConsoleUI.Interfaces;
+﻿using ConsoleUI.Interfaces;
 using ConsoleUI.Test.Context;
 using NUnit.Framework;
 using TechTalk.SpecFlow;

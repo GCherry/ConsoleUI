@@ -7,8 +7,6 @@ using Serilog;
 using System;
 using System.IO;
 
-// DI, Serilog, Settings
-
 namespace ConsoleUI
 {
     public class Program

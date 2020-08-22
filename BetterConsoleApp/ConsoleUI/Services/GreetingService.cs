@@ -2,8 +2,6 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-// DI, Serilog, Settings
-
 namespace ConsoleUI.Services
 {
     public class GreetingService : IGreetingService
